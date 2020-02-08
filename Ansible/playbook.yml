@@ -1,0 +1,22 @@
+- name: playbook para o Vagrant
+  hosts: all
+  become: yes
+  tasks:
+    - name: instalando epel-release
+      package:
+        name: epel-release
+        state: present
+    - name: instalando o vim
+      package:
+        name: vim
+        state: present
+    - name: copiando a chave privada de ssh
+      copy:
+        src: devops
+        dest: /root/
+        mode: 0600
+      when: ansible_hostname == "node1"
+    - name: copiando chave publica
+      lineinfile:
+        path: /home/vagrant/.ssh/authorized_keys
+        line: "{{ lookup('file','id_rsa.pub') }}"
