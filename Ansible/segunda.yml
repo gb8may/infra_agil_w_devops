@@ -1,0 +1,10 @@
+- name: minha segunda playbook
+  hosts: node1
+  become: yes
+  tasks:
+    - name: install the latest version of Cowsay
+      yum:
+        name:
+         - cowsay
+         - figlet
+        state: present
