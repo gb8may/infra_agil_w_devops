@@ -5,7 +5,7 @@ node1.vm.box = "centos/7"
 node1.vm.network "private_network", ip: "192.168.33.1"
 node1.vm.hostname = "node1.olivarius.com.br"
 
-config.vm.provider "virtualbox" do |vb|
+node1.vm.provider "virtualbox" do |vb|
 vb.memory = "1024"
 end
 
@@ -18,7 +18,7 @@ node.vm.box = "centos/7"
 node.vm.network "private_network", ip: "192.168.33.#{i}"
 node.vm.hostname = "node#{i}.olivarius.com.br"
 
-config.vm.provider "virtualbox" do |vb|
+node.vm.provider "virtualbox" do |vb|
 vb.memory = "2048"
 end
 end
