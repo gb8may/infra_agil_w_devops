@@ -1,0 +1,8 @@
+- name: lista de pacotes padrao
+  package:
+   name: "{{ item }}"
+  with_items:
+    - figlet
+    - cowsay
+    - vim
+    - net-tools
