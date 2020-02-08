@@ -1,0 +1,5 @@
+- name: criando uma lista de usuarios
+  user:
+   name: "{{ item }}"
+  with_items:
+   - "{{ listausuarios }}"
