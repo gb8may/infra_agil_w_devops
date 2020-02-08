@@ -1,9 +1,0 @@
-- name: minha primeira playbook
-  hosts: all
-  become: yes
-  tasks:
-   - name: Add the user 'johnd' with a specific uid
-     user:
-       name: johnd
-       comment: John Doe
-       uid: 1040
