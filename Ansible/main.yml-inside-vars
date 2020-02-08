@@ -1,0 +1,5 @@
+# vars file for config
+# File /etc/ansible/roles/config/vars
+# Name: main.yml
+
+listausuarios: ['batata', 'devops', 'bburso']
