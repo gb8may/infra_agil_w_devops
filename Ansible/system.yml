@@ -1,0 +1,12 @@
+- name: arquivos padroes do sistema
+  template:
+   src: templates/hosts
+   dest: /etc/hosts
+
+- name: linhas padroes em um arquivo
+  blockinfile:
+   path: /etc/hosts
+   block:  |
+     192.168.33.151 node1.olivarius.com.br
+     192.168.33.152 node2.olivaruis.com.br
+     192.168.33.153 node3.olivaruis.com.br
